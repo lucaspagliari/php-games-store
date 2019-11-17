@@ -9,6 +9,7 @@
 </head>
 <body>
         <div class="container" id="container">
+            <!-- REGISTER -->
             <div class="form-container sign-up-container">
                 <form action="../../api/registerUser.php" method="post">
                     <h1>Crie uma conta</h1>
@@ -16,17 +17,24 @@
                     <input type="email" placeholder="Email" name="email" required>
                     <input type="password" placeholder="Senha" name="senha" required>
                     <input type="text" placeholder="CPF"  id="cpf" name="cpf" maxlength="11" required>
-                    <button>Cadastre-se</button>
+                    <input type="text" name="register" value="true" style="display: none">
+                    <button type="submit" >Cadastre-se</button>
                 </form>
             </div>
+            <!-- LOGIN -->
             <div class="form-container sign-in-container">
                 <form action="../../api/login.php" method="post">
                 <h1>Entrar</h1>
                     <input type="text" name="login" value="true" style="display: none">
                     <input type="email" placeholder="Email" name="email" required>
                     <input type="password" placeholder="Senha" name="senha" required>
-                    <a href="#">Esqueceu a senha?</a>
-                    <button>Entrar</button>
+                    <button type="submit">Entrar</button>
+                    <?php
+                        $error = isset($_GET['error']) ? $_GET['error'] : '';
+                        if ($error == 'user_not_found') {
+                            echo '<h3>Usuário não encontrado!</h3>';
+                        }
+                    ?>
                 </form>
             </div>
             <div class="overlay-container">

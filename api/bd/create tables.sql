@@ -1,13 +1,13 @@
 /* Creating tables */
-CREATE TABLE Usuario (
+CREATE TABLE Usuarios (
 	cpf varchar (13) not null,
 	nome varchar (50) not null,
 	senha varchar (50) not null,
-	email varchar (30) not null,
+	email varchar (30) not null unique,
     primary key (cpf)
 );
 
-CREATE TABLE Jogo (
+CREATE TABLE Jogos (
 	id int auto_increment,
     nome varchar (50) not null,
     valor decimal (8) not null,
@@ -26,7 +26,7 @@ CREATE TABLE Anunciar (
 	foreign key (id) references Jogo (id)
 );
 
-CREATE TABLE Endereco (
+CREATE TABLE Enderecos (
 	id int auto_increment,
 	rua varchar(30),
 	numero varchar(10),
@@ -36,3 +36,8 @@ CREATE TABLE Endereco (
     primary key (id),
 	foreign key (cpf) references Usuario (CPF)
 );
+
+INSERT INTO Usuarios (cpf, nome, email, senha) 
+	VALUES ('40100100105', 'test', 'test@gmail.com', '1234');
+
+SELECT * FROM Usuarios;

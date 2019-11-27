@@ -1,0 +1,1 @@
+<!-- here we put a creation form for a game -->

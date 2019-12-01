@@ -16,8 +16,10 @@ if (isset($_POST['register'])) {
         $valor = str_replace(",",".",$valor);
         $valor = floatval($valor);
         $result1 = mysqli_query($conn, "SELECT email FROM `Usuarios` WHERE `email` = '$email'");
-        $result2 = mysqli_query($conn, "SELECT id FROM `jogos` WHERE `id` = '$jogo'");
-
+        $result2 = mysqli_query($conn, "SELECT nome FROM `jogos` WHERE `id` = '$jogo'");
+        foreach ($result2 as $row) {
+            $nome = $row["nome"];
+        }
         if (mysqli_num_rows($result1) == 0) {
             header("Location: ../front/forms/anuncio.php?message=no_user_loggedin");
         
@@ -27,7 +29,7 @@ if (isset($_POST['register'])) {
         } else {
 
         $sql = "INSERT INTO Anuncios (titulo , descricao , valor , cpf , id)
-        VALUES ('$titulo', '$descricao' , '$valor' , (SELECT cpf from usuarios WHERE email='$email') , (SELECT id from Jogos WHERE nome='$jogo'))";
+        VALUES ('$titulo', '$descricao' , '$valor' , (SELECT cpf from usuarios WHERE email='$email') , (SELECT id from Jogos WHERE nome='$nome'))";
         $result3 = mysqli_query($conn, $sql);
         header("Location: ../front/forms/anuncio.php?message=game_created");
         }

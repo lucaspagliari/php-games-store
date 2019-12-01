@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/detalhado.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+
 </head>
 <body>
     <?php   
@@ -17,6 +19,8 @@
             }
         }
     ?>
+    <!-- dynamic navbar -->
+    <nav class="nav-app"></nav>
     <div class="container">
         <div class="product-container main-product-container">
             <div class="product-left-container">
@@ -70,6 +74,6 @@
         <br clear="all" />
     </div>
     
-    
+    <script src="../js/navbar.js"></script>
 </body>
 </html>

@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lista de Jogos</title>
-    <link rel="stylesheet" href="../css/jogos-style.css">
+    <link rel="stylesheet" href="../css/jogos.css">
+    <link rel="stylesheet" href="../css/navbar.css">
 </head>
 
 <body>
+    
+    <!-- dynamic navbar -->
+    <nav id="nav-app"></nav>
     <div class="main">
         <h1 class="main-title">Lista de Jogos</h1>
 
@@ -45,7 +49,8 @@
         
         </ul>
     </div>
-
+    
+    <script src="../js/navbar.js"></script>
 </body>
 
 </html>

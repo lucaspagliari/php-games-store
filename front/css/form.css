@@ -5,16 +5,19 @@
 }
 
 body {
+	overflow: hidden;
+}
+#main {
 	background: #f6f5f7;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
-	height: 100vh;
-	margin: -20px 0 50px;
+	height: 95vh;
+	margin: 0px 0 0px;
+	
 }
-
 h1 {
 	font-weight: bold;
 	margin: 0;
@@ -30,7 +33,6 @@ p {
 }
 
 a {
-	color: #333;
 	font-size: 14px;
 	text-decoration: none;
 	margin: 15px 0;

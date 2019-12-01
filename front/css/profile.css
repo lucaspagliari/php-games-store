@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+/* 
+* Art by @jofpin 
+* 2014
+*/
+body {
+  background: #f8f5f0;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.content-profile-page {
+  margin:0 auto;
+  width: 80.23em;
+}
+
+.card {
+  background: #fff;
+  border-radius: 0.3rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  border: .1em solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 1em; 
+}
+
+.profile-user-page .img-user-profile {
+	margin: 0 auto;
+  text-align: center; 
+}
+.profile-user-page .img-user-profile .profile-bgHome {
+	border-bottom: .2em solid #f5f5f5;
+  width: 80em;
+  height: 16em;
+  }
+.profile-user-page .img-user-profile .avatar {
+	margin: 0 auto;
+  background: #fff;
+  width: 10em;
+  height: 10em;
+  padding: 0.25em;
+  border-radius: 100%;
+  margin-top: -6em;
+  box-shadow: 0 0 .1em rgba(0, 0, 0, 0.35);
+}
+.profile-user-page button {
+	position: absolute;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 7em; 
+  background: #3498db;
+  border: 1px solid #2487c9;
+  color: #fff;
+  outline: none;
+  border-radius: 0 .6em .6em 0;
+  padding: .80em;
+}
+
+.profile-user-page button:hover {
+  background: #51a7e0;
+  transition: background .2s ease-in-out;
+  border: 1px solid #2487c9;
+}
+.profile-user-page .user-profile-data, .profile-user-page .description-profile {
+  text-align: center;
+  padding: 0 1.5em; 
+}
+.profile-user-page .user-profile-data h1 {
+  font-family: "Lato", sans-serif;
+  margin-top: 0.35em;
+  color: #292f33;
+  margin-bottom: 0; 
+}
+.profile-user-page .user-profile-data p {
+	font-family: "Lato", sans-serif;
+  color: #8899a6; 
+  font-size: 1.1em;
+  margin-top: 0;
+  margin-bottom: 0.5em; 
+}
+
+.profile-user-page .data-user {
+	font-family: "Quicksand", sans-serif;
+  margin-bottom: 0;
+  cursor: pointer;
+  padding: 0;
+  list-style: none;
+  display: table;
+  width: 100.15%; 
+}
+
+.header{
+  font-weight:bold;
+  
+}
+
+i{
+  font-family:inherit
+}
+
+
+
+i.fas {
+  display: inline-block;
+  border-radius: 100%;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.5em;
+  margin-right:10px;
+  color:white;
+}
+
+p{
+  margin-right:60px;
+  margin-left:60px;
+}
+
+h1, h2, h3, h4{
+ 
+  font-family: 'Roboto', sans-serif;
+}
+
+.fa-flag{
+  background-color:#B1973A;
+}
+
+.fa-briefcase{
+  background-color:#65BDAC;
+}
+
+.fa-utensils{
+  background-color:#263A53;
+}
+
+.fa-heart{
+  background-color:#C9512D;
+}
+
+.fa-dice-four{
+  background-color:#63ADBC;
+}

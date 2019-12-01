@@ -3,8 +3,6 @@ const element = document.querySelector("#nav-app");
 const url = window.location.pathname;
 let navbarStructure = `<nav><ul>`;
 
-console.log(url);
-
 if (url.includes("app")) {
     navbarStructure += `
             <li><a href="../index.php">Início</a></li>

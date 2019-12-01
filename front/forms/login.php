@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     <title>Loja de Game</title>
 </head>
 <body>
+    <nav id="nav-app"></nav>
+    <div id="main">
+
         <div class="container" id="container">
             <!-- REGISTER -->
             <div class="form-container sign-up-container">
@@ -56,6 +60,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/form.js"></script>
 </body>
-<script src="../js/form.js"></script>
 </html>

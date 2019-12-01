@@ -9,6 +9,7 @@
 
 </head>
 <body>
+    <!-- dynamic navbar -->
 	<nav id="nav-app"></nav>
 	<script src="js/navbar.js"></script>
 </body>

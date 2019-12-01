@@ -16,6 +16,7 @@ if (isset($_POST['login'])) {
                 $_SESSION['logado'] = TRUE;             
                 $_SESSION['nome'] = $row['nome'];
                 $_SESSION['email'] = $row['email'];
+                $_SESSION['cpf'] = $row['cpf'];
                 header('Location: ../front/index.php');
             }   
         } else {

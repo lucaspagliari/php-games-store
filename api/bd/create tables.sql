@@ -38,17 +38,15 @@ CREATE TABLE Enderecos (
 	foreign key (cpf) references Usuarios (CPF)
 );
 
-drop table Enderecos;
+
 
 INSERT INTO Usuarios (cpf, nome, email, senha) 
 	VALUES ('40100100105', 'admin', 'admin@gmail.com', '1234');
 
-INSERT INTO Enderecos(rua, numero, bairro, cep, cpf) 
-	VALUES ('rua pirilimpimpim', '1337', 'good city','13211500', '40100100105');
-
-
 INSERT INTO Jogos (nome, produtora, ano) 
 	VALUES ('Minecraft', 'Mojang', '2012');
 
-
-SELECT * FROM Usuarios;
+drop table Enderecos;
+drop table Usuarios;
+drop table Jogos;
+drop table Anuncios;

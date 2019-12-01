@@ -17,6 +17,10 @@
                     <input type="email" placeholder="Email" name="email" required>
                     <input type="password" placeholder="Senha" name="senha" required>
                     <input type="text" placeholder="CPF"  id="cpf" name="cpf" maxlength="11" required>
+                    <input type="text" placeholder="Rua" name="rua" required>
+                    <input type="text" placeholder="Numero" name="numero" required>
+                    <input type="text" placeholder="Bairro" name="bairro" required>
+                    <input type="text" placeholder="CEP" name="cep" required>
                     <input type="text" name="register" value="true" style="display: none">
                     <button type="submit" >Cadastre-se</button>
                 </form>

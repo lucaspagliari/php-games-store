@@ -4,10 +4,17 @@ require 'conection.php';
 
 
 if (isset($_POST['register'])) {
+    // tab usuario
     $nome = $_POST['nome'];
     $senha = $_POST['senha'];
     $email = $_POST['email'];
     $cpf = $_POST['cpf'];
+    // tab endereco
+    $rua = $_POST['rua'];
+    $numero = $_POST['numero'];
+    $bairro = $_POST['bairro'];
+    $cep = $_POST['cep'];
+    
 
     if (filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($nome) && !empty($senha) && !empty($cpf)) {
         
@@ -27,12 +34,22 @@ if (isset($_POST['register'])) {
 
         } else {
          
+        //fazer check?
+        
+            $sql = "INSERT INTO Enderecos (rua, numero, bairro, cep) 
+            VALUES ('$rua', '$numero', '$bairro', '$cep')";
+    
+            $result = mysqli_query($conn, $sql);       
+
             $sql = "INSERT INTO Usuarios (cpf, nome, email, senha) 
                 VALUES ('$cpf', '$nome', '$email', '$senha')";
             
             $result = mysqli_query($conn, $sql);        
-            header("Location: ../front/app/form.php?message=user_created");            
+            header("Location: ../front/app/form.php?message=user_created");      
+            
         }
+  
+
     } else {    
         header('Location: ../front/app/form.php?error=email_invalid');
     }

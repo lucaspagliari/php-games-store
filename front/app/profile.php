@@ -29,16 +29,16 @@
         
         ";
 
-        $result = mysqli_query($conn, "SELECT * FROM 'Anuncios' WHERE cpf='$cpf'");
+        $result = mysqli_query($conn, "SELECT * FROM Anuncios WHERE cpf='$cpf'");
         
             try {
                 foreach ($result as $row) {
-                    $jogo_id = $row["jogoid"];
+                    $jogo_id = $row["id"];
                     $titulo = $row["titulo"];
                     $descricao = $row["descricao"];
                     $valor = $row["valor"];
     
-                    $text += "<div class='profile-projects'>
+                    $text .= "<div class='profile-projects'>
                     <ol class='cards'>
                         <li><a class='card' href='./detalhado.php?jogoid=$jogo_id'>
                             <h4 class='card__title'>$titulo</h4>
@@ -50,7 +50,7 @@
                     </div>";
                 }
             } catch (Throwable $th) {
-                $text += "<div class='profile-projects'>
+                $text .= "<div class='profile-projects'>
                     <ol class='cards'>
                     <p class='card__meta'>Sem Anúncios</p>
                     </ol>
@@ -60,10 +60,6 @@
         echo $text;
 
     ?>
-    
-    
-   
-    
 
     <script src="../js/navbar.js"></script>
 </body>

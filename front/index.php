@@ -26,7 +26,10 @@
 <body>
 
 	<header>
-
+		<?php
+			session_start()
+			echo $_SESSION["nome"];
+		?>
 		<div class="bottom-area">
 			<ul class="main-menu visible-on-click" id="main-menu">
 				<li><input type="image" src="img/cart.png" class="btn"></li>

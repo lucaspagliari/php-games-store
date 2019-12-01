@@ -32,13 +32,23 @@ CREATE TABLE Enderecos (
 	rua varchar(30),
 	numero varchar(10),
 	bairro varchar(30),
-	cep varchar(7),
+	cep varchar(8),
 	cpf varchar(13),
     primary key (id),
 	foreign key (cpf) references Usuarios (CPF)
 );
 
+drop table Enderecos;
+
 INSERT INTO Usuarios (cpf, nome, email, senha) 
-	VALUES ('40100100105', 'test', 'test@gmail.com', '1234');
+	VALUES ('40100100105', 'admin', 'admin@gmail.com', '1234');
+
+INSERT INTO Enderecos(rua, numero, bairro, cep, cpf) 
+	VALUES ('rua pirilimpimpim', '1337', 'good city','13211500', '40100100105');
+
+
+INSERT INTO Jogos (nome, produtora, ano) 
+	VALUES ('Minecraft', 'Mojang', '2012');
+
 
 SELECT * FROM Usuarios;

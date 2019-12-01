@@ -27,8 +27,8 @@ if (isset($_POST['register'])) {
 
         } else {
 
-        $sql = "INSERT INTO Anuncios (titulo , descricao , valor , cpf , id, data)
-        VALUES ('$titulo', '$descricao' , '$valor' , (SELECT cpf from usuarios WHERE email='$email') , (SELECT id from Jogos WHERE nome='$jogo'),'NOW()')";
+        $sql = "INSERT INTO Anuncios (titulo , descricao , valor , cpf , id)
+        VALUES ('$titulo', '$descricao' , '$valor' , (SELECT cpf from usuarios WHERE email='$email') , (SELECT id from Jogos WHERE nome='$jogo')')";
         $result3 = mysqli_query($conn, $sql);
         header("Location: ../front/forms/anuncio.php?message=game_created");
         }

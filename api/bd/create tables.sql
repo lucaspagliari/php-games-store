@@ -18,7 +18,7 @@ CREATE TABLE Anuncios (
 	idanuncio int auto_increment,
 	titulo varchar (40),
 	descricao varchar (200),
-	valor decimal (10) not null,
+	valor float (10) not null,
 	cpf varchar (13),
 	id int (5),
 	data datetime,

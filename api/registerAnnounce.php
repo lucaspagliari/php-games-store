@@ -9,46 +9,31 @@ if (isset($_POST['register'])) {
     $valor = $_POST['valor'];
     $descricao = $_POST['descricao'];
     $jogo = "Jogo 2";
-    $usuario = "test@gmail.com";
+    $email = "test@gmail.com";
 
     if (!empty($titulo) && !empty($valor) && !empty($descricao) && !empty($jogo)) {
         
         $valor = str_replace("R$","",$valor);
         $valor = str_replace(",",".",$valor);
         $valor = floatval($valor);
-        
-        $result = mysqli_query($conn, "SELECT * FROM `jogos` WHERE `nome` = '$jogo'");
-        $result2 = mysqli_query($conn, "SELECT * FROM `Usuarios` WHERE `email` = '$usuario'");
-       
-        if (mysqli_num_rows($result) == 0) {
-            header("Location: ../front/app/form.php?error=cpf_already_registred");
+        $result1 = mysqli_query($conn, "SELECT email FROM `Usuarios` WHERE `email` = '$email'");
+        $result2 = mysqli_query($conn, "SELECT id FROM `jogos` WHERE `nome` = '$jogo'");
+
+        if (mysqli_num_rows($result1) == 0) {
+            header("Location: ../front/forms/anuncio.php?message=no_user_loggedin");
         
         } else if (mysqli_num_rows($result2) == 0) {
-            header("Location: ../front/app/form.php?error=email_already_registred");
+            header("Location: ../front/forms/anuncio.php?message=no_game_found");
 
         } else {
 
-        foreach ($result as $row) {
-                $id = $row["id"];
-                $nome = $row["nome"];
-                $produtora = $row["produtora"];
-                $ano = $row["ano"];}
-        $id = $row["id"];
-       
-        foreach ($result2 as $row) {
-            $id = $row["cpf"];
-            $nome = $row["nome"];
-            $produtora = $row["senha"];
-            $ano = $row["email"];}
-        $cpf = $row["cpf"];
-
-        $sql = "INSERT INTO Anuncios (titulo , descricao , valor , cpf , id , data)
-        VALUES ('$titulo', '$descricao' , '$valor' , '$id' , '$cpf' , '$today')";
+        $sql = "INSERT INTO Anuncios (titulo , descricao , valor , cpf , id, data)
+        VALUES ('$titulo', '$descricao' , '$valor' , (SELECT cpf from usuarios WHERE email='$email') , (SELECT id from Jogos WHERE nome='$jogo'),'NOW()')";
         $result3 = mysqli_query($conn, $sql);
-        header("Location: ../front/app/gameForm.php?message=game_created");
+        header("Location: ../front/forms/anuncio.php?message=game_created");
         }
     } else {    
-        header('Location: ../front/app/gameForm.php?error=bad_input');
+        header('Location: ../front/forms/anuncio.php?error=bad_input');
     }
 }
 ?>

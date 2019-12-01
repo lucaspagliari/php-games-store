@@ -5,26 +5,22 @@ require 'conection.php';
 
 if (isset($_POST['register'])) {
     $nome = $_POST['nome'];
-    $valor = $_POST['valor'];
-    if ($_POST['digital'] == '1'){
-        $digital = 1;
-    }
-    else{
-        $digital = 0;
-    }
-    if (!empty($nome) && !empty($valor)) {
-        
-        $valor = str_replace("R$","",$valor);
-        $valor = str_replace(",",".",$valor);
-        $valor = floatval($valor);
-        
-        $sql = "INSERT INTO Jogos (nome, valor, digital)
-        VALUES ('$nome', '$valor', '$digital')";
+    $produtora = $_POST['produtora'];
+    $ano = $_POST['ano'];    
+
+    if (!empty($nome) && !empty($produtora) && !empty($ano) ) {  
+
+        $sql = "INSERT INTO Jogos (nome, produtora, ano)
+        VALUES ('$nome', '$produtora', '$ano')";
         $result = mysqli_query($conn, $sql);
         header("Location: ../front/app/gameForm.php?message=game_created");
-        }
-    } else {    
+        
+    }
+    
+    } else {  
+
         header('Location: ../front/app/gameForm.php?error=bad_input');
+  
     }
 
 

@@ -1,4 +1,3 @@
-/* Creating tables */
 CREATE TABLE Usuarios (
 	cpf varchar (13) not null,
 	nome varchar (50) not null,
@@ -10,20 +9,22 @@ CREATE TABLE Usuarios (
 CREATE TABLE Jogos (
 	id int auto_increment,
     nome varchar (50) not null,
-    valor decimal (8) not null,
-    digital bool not null,
-    primary key (id)
+	produtora varchar (50) not null,
+    ano int(4),
+	primary key (id)
 );
 
-
 CREATE TABLE Anunciar (
-	cadastro int auto_increment,
-	cpf varchar (10),
-	id varchar (10),
-    data datetime,
-    primary key (cadastro),
-	foreign key (cpf) references Usuario (cpf),
-	foreign key (id) references Jogo (id)
+	idanuncio int auto_increment,
+	descricao varchar (50),
+	digital boolean not null,
+	valor decimal (10) not null,
+	cpf varchar (13),
+	id int (5),
+	data datetime,
+	primary key (idanuncio),
+	foreign key (cpf) references Usuarios (cpf),
+	foreign key (id) references Jogos (id)
 );
 
 CREATE TABLE Enderecos (
@@ -34,7 +35,7 @@ CREATE TABLE Enderecos (
 	cep varchar(7),
 	cpf varchar(13),
     primary key (id),
-	foreign key (cpf) references Usuario (CPF)
+	foreign key (cpf) references Usuarios (CPF)
 );
 
 INSERT INTO Usuarios (cpf, nome, email, senha) 

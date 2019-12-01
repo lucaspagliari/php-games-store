@@ -13,12 +13,11 @@
             <!-- REGISTER -->
             <div class="form-container game-form-container">
                 <form action="../../api/registerGame.php" method="post">
-                    <h1>Registrando Jogos</h1>
+                    <h1>Meu Anuncio</h1>
                     <input type="text" placeholder="Nome do Jogo" name="nome" required>
-                    <input type="text" placeholder="Produtor (a)" name="produtora" required> 
-                    <input type="text" placeholder="Ano de Lançamento" name="ano" required> 
+                    <input type="text" placeholder="Produtor (a)" name="producer" required>
                     <input type="text" name="register" value="true" style="display: none"> 
-                    <button type="submit" >Registrar</button>
+                    <button type="submit" >Cadastre-se</button>
                 </form>
             </div>
             </div>
@@ -27,3 +26,6 @@
 <script src="../js/form.js"></script>
 </html>
 
+   <!--Minha copia é digital 
+                    <input type="checkbox" placeholder ="Digital" name="digital" value = '1'>-->
+                    

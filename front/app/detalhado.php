@@ -22,7 +22,6 @@
             }
     ?>
     <nav id="nav-app"></nav>
-    <script src="../js/navbar.js"></script>
     <div class="container">
         <div class="product-container main-product-container">
             <div class="product-left-container">
@@ -34,7 +33,7 @@
                 Produtora: <?php echo $produtora ?><br>
                 <br>
                 <h3>Anuncios sobre este produto:</h3> 
-                        <a  class="anuncio" href="./compra.php">
+                        <a  class="anuncio" href="./confirmar.php">
                     <?php 
                     $result1 = mysqli_query($conn, "SELECT * FROM `anuncios` WHERE `id` = '$id' ");
                     foreach ($result1 as $row) {
@@ -57,5 +56,7 @@
         </div>
         <br clear="all" />
     </div>
+    <script src="../js/navbar.js"></script>
+
 </body>
 </html>

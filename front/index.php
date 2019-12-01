@@ -28,7 +28,7 @@
 	<header>
 		<?php
 			session_start()
-			echo $_SESSION["nome"];
+			// echo $_SESSION["nome"];
 		?>
 		<div class="bottom-area">
 			<ul class="main-menu visible-on-click" id="main-menu">

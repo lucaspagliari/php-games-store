@@ -7,8 +7,8 @@ if (isset($_POST['register'])) {
     $titulo = $_POST['titulo'];
     $valor = $_POST['valor'];
     $descricao = $_POST['descricao'];
-    $jogo = "Jogo 2";
-    $email = "test@gmail.com";
+    $jogo = $_POST['jogo'];
+    $email = "admin@gmail.com";
 
     if (!empty($titulo) && !empty($valor) && !empty($descricao) && !empty($jogo)) {
         
@@ -16,7 +16,7 @@ if (isset($_POST['register'])) {
         $valor = str_replace(",",".",$valor);
         $valor = floatval($valor);
         $result1 = mysqli_query($conn, "SELECT email FROM `Usuarios` WHERE `email` = '$email'");
-        $result2 = mysqli_query($conn, "SELECT id FROM `jogos` WHERE `nome` = '$jogo'");
+        $result2 = mysqli_query($conn, "SELECT id FROM `jogos` WHERE `id` = '$jogo'");
 
         if (mysqli_num_rows($result1) == 0) {
             header("Location: ../front/forms/anuncio.php?message=no_user_loggedin");

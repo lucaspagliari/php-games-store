@@ -10,28 +10,40 @@
 </head>
 <body>
     <nav id="nav-app"></nav>
-<div class="content-profile-page">
-   <div class="profile-user-page card">
-      <div class="img-user-profile">
-        <img class="profile-bgHome" src="" />
-        <img class="avatar" src="https://asphaltgold.de/media/catalog/product/cache/1/image/930x669/0f396e8a55728e79b48334e699243c07/s/t/st_ssy_stock_cap_black_1.jpg" alt="jofpin"/>
-           </div>
-          <div class="user-profile-data">
-            <h1>{{Resident Name}}</h1>
-            <p>{{Community}}</p>
-            <p style='font-size:12px'>{{Apt Number}}</p>
-          </div> 
-
-         <div class="container">
-           <div class="row">
-             <h4 style="color:#65BDAC" class="header"><i class="fas fa-briefcase"></i>PROFESSION </h4>
-           </div>
-           <div class="row">
-             <p>{{Resident Name}} is a {{Occupation}}. {{Occupation General Comment}}</p>    
-           </div>
-      </div>
-    
+    <div class="user-profile">
+        <div class="profile-card">
+            <h1 class="profile-card__title">Bart Veneman</h1>
+            <p class="profile-card__subtitle">bartveneman</p><img class="profile-card__avatar"
+                src="https://gravatar.com/avatar/56d18ba2b0bf189436499b0f215b5e29?s=100" alt="Avatar for Bart Veneman">
+        </div>
     </div>
+    <div class="profile-projects">
+            <h2>Seus Anúncios </h2>
+            <ol class="cards">
+                <li><a class="card" href="">
+                    <h4 class="card__title">Very long ttitle that wraps on new lines</h4>
+                    <p class="card__meta">Updated
+                        <time>4 hours ago</time>
+                    </p>
+                </a></li>
+            </ol>
+        </div>
+    
+    <?php
+        session_start();
+
+        $nome = $_SESSION['nome'];
+        $email = $_SESSION['email'];
+        
+        $text = "
+        ss
+        ";
+
+        echo $text;
+
+    ?>
+    
+
     <script src="../js/navbar.js"></script>
 </body>
 </html>

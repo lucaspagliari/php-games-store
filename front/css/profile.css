@@ -1,140 +1,98 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-/* 
-* Art by @jofpin 
-* 2014
-*/
+html {
+  background-color: #1d1c21;
+  color: #cfcdd5;
+  font-family: sans-serif;
+}
 body {
-  background: #f8f5f0;
+  margin: 0;
   font-family: 'Montserrat', sans-serif;
 
 }
-
-.content-profile-page {
-  margin:0 auto;
-  width: 80.23em;
-}
-
-.card {
-  background: #fff;
-  border-radius: 0.3rem;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  border: .1em solid rgba(0, 0, 0, 0.2);
-  margin-bottom: 1em; 
-}
-
-.profile-user-page .img-user-profile {
-	margin: 0 auto;
-  text-align: center; 
-}
-.profile-user-page .img-user-profile .profile-bgHome {
-	border-bottom: .2em solid #f5f5f5;
-  width: 80em;
-  height: 16em;
-  }
-.profile-user-page .img-user-profile .avatar {
-	margin: 0 auto;
-  background: #fff;
-  width: 10em;
-  height: 10em;
-  padding: 0.25em;
-  border-radius: 100%;
-  margin-top: -6em;
-  box-shadow: 0 0 .1em rgba(0, 0, 0, 0.35);
-}
-.profile-user-page button {
-	position: absolute;
-  font-size: 13px;
-  font-weight: bold;
-  cursor: pointer;
-  width: 7em; 
-  background: #3498db;
-  border: 1px solid #2487c9;
-  color: #fff;
-  outline: none;
-  border-radius: 0 .6em .6em 0;
-  padding: .80em;
-}
-
-.profile-user-page button:hover {
-  background: #51a7e0;
-  transition: background .2s ease-in-out;
-  border: 1px solid #2487c9;
-}
-.profile-user-page .user-profile-data, .profile-user-page .description-profile {
+.profile-card {
+  background-color: #eae9ec;
+  color: #050506;
+  padding: 3vw 5vw;
   text-align: center;
-  padding: 0 1.5em; 
+  background:
 }
-.profile-user-page .user-profile-data h1 {
-  font-family: "Lato", sans-serif;
-  margin-top: 0.35em;
-  color: #292f33;
-  margin-bottom: 0; 
+@media (min-width: 800px) {
+  .profile-card {
+    padding-bottom: 10vmin;
+    margin: 20px;
+    width: 100%;
+    height: 50vh;
+  }
 }
-.profile-user-page .user-profile-data p {
-	font-family: "Lato", sans-serif;
-  color: #8899a6; 
-  font-size: 1.1em;
-  margin-top: 0;
-  margin-bottom: 0.5em; 
+.profile-card__title {
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 40px;
 }
-
-.profile-user-page .data-user {
-	font-family: "Quicksand", sans-serif;
-  margin-bottom: 0;
-  cursor: pointer;
-  padding: 0;
-  list-style: none;
-  display: table;
-  width: 100.15%; 
+.profile-card__subtitle {
+  margin: 0;
+  color: #615e6e;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
-
-.header{
-  font-weight:bold;
-  
-}
-
-i{
-  font-family:inherit
-}
-
-
-
-i.fas {
+.profile-card__avatar {
   display: inline-block;
-  border-radius: 100%;
-  box-shadow: 0px 0px 2px #888;
-  padding: 0.5em 0.5em;
-  margin-right:10px;
-  color:white;
+  margin: 0;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  width: 100px;
+  height: 100px;
 }
-
-p{
-  margin-right:60px;
-  margin-left:60px;
+.profile-projects h2 {
+  display: none;
 }
-
-h1, h2, h3, h4{
- 
-  font-family: 'Roboto', sans-serif;
+.cards {
+  padding: 0 20px;
+  list-style: none;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+  grid-gap: 20px;
 }
-
-.fa-flag{
-  background-color:#B1973A;
+@media (min-width: 800px) {
+  .cards {
+    margin-top: -15vmin;
+    grid-template-columns: repeat(auto-fit, minmax(28ch, 1fr));
+  }
 }
-
-.fa-briefcase{
-  background-color:#65BDAC;
+.card {
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  background-color: #fff;
+  color: #1d1c21;
+  text-decoration: none;
+  padding: 20px;
+  height: 8em;
+  box-shadow: 0 2px 4px rgba(29,28,33,0.2);
 }
-
-.fa-utensils{
-  background-color:#263A53;
+.card:hover {
+  background-color: #eae9ec;
 }
-
-.fa-heart{
-  background-color:#C9512D;
+.card:focus {
+  outline: 2px solid #0d62e0;
 }
-
-.fa-dice-four{
-  background-color:#63ADBC;
+.card:hover,
+.card:focus {
+  box-shadow: 0 2px 2px rgba(29,28,33,0.5);
+}
+.card__title {
+  font-size: 18px;
+  margin: 0;
+}
+.card__meta {
+  margin: auto 0 0 0;
+  color: #9491a1;
 }

@@ -1,8 +1,11 @@
 body {
-    background:#fff;
-    font-family: "Open Sans";
-    font-weight:300;
-  }
+  color: #272727;
+	font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+}
   
   h1.product-page {
     font-weight:800;

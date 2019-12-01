@@ -25,29 +25,13 @@
                 image
             </div>
             <div class="product-col-container">
-                <p class="product-info-meta">Nyförsäljning</p>
-                <h1 class="product-page">Högtalare X-mini RAVE</h1>
-                <p>
-                    <b>Quick overview</b><br />
+                <p class="product-info-meta">Seção de Detalhes</p>
+                <h1 class="product-page"><?php $nome ?>aaa</h1>
+                <p><br />
                     Minihögtalare med mycket bra ljud för PC/smart phone och inbyggd radio. Perfekt att ha med på
                     semestern, i parken eller på uteplatsen en varm sommarkväll.
                 </p>
-                <p class="product-price">
-                    <b>Pris:</b>
-                    <span class="old-price">499 kr</span>
-                    <span class="price">399 kr</span>
-                    <span class="product-price-meta" style="float:right;">
-                        Finns i lager.
-                    </span>
-                </p>
-                <p>
-                    <span class="quantity">Antal: [quantity select]</span>
-                    <button>Lägg i varukorgen</button>
-                    <br clear="both" />
-                </p>
-                <p>
-                    [social sharing]
-                </p>
+                
             </div>
         </div>
         <br clear="all" />

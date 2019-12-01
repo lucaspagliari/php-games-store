@@ -14,10 +14,10 @@ CREATE TABLE Jogos (
 	primary key (id)
 );
 
-CREATE TABLE Anunciar (
+CREATE TABLE Anuncios (
 	idanuncio int auto_increment,
-	descricao varchar (50),
-	digital boolean not null,
+	titulo varchar (40),
+	descricao varchar (200),
 	valor decimal (10) not null,
 	cpf varchar (13),
 	id int (5),
@@ -32,7 +32,7 @@ CREATE TABLE Enderecos (
 	rua varchar(30),
 	numero varchar(10),
 	bairro varchar(30),
-	cep varchar(7),
+	cep varchar(8),
 	cpf varchar(13),
     primary key (id),
 	foreign key (cpf) references Usuarios (CPF)

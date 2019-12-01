@@ -29,9 +29,19 @@
                     <div class="select-style">
                         <select name="jogo">
                             <option default>Select Your Game</option>
-                            <option value="jogo1">Jogo 1</option>
-                            <option value="jogo2">Jogo 2</option>
-                            <option value="jogo3">Jogo 3</option>
+                    <?php
+            
+                        require "../../api/conection.php";
+
+                        $result = mysqli_query($conn, "SELECT * FROM Jogos ORDER BY id DESC");
+                        foreach ($result as $row) {
+                            $id = $row["id"];
+                            $nome = $row["nome"];
+                            $text = "<option value='$id'>$nome</option>";
+                            echo $text;
+                        }
+                        ?>
+                            
                         </select>
                     </div>
                     <input type="text" placeholder="Descricao" name="descricao" required>

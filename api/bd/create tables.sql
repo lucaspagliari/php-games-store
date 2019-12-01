@@ -1,3 +1,8 @@
+drop table Usuarios;
+drop table Enderecos;
+drop table Anuncios;
+drop table Jogos;
+
 CREATE TABLE Usuarios (
 	cpf varchar (13) not null,
 	nome varchar (50) not null,
@@ -21,7 +26,7 @@ CREATE TABLE Anuncios (
 	valor float (10) not null,
 	cpf varchar (13),
 	id int (5),
-	data DATETIME NOT NULL CURRENT_TIMESTAMP,
+	criado_em DATETIME NOT NULL DEFAULT NOW(),
 	primary key (idanuncio),
 	foreign key (cpf) references Usuarios (cpf),
 	foreign key (id) references Jogos (id)
@@ -45,8 +50,5 @@ INSERT INTO Usuarios (cpf, nome, email, senha)
 
 INSERT INTO Jogos (nome, produtora, ano) 
 	VALUES ('Minecraft', 'Mojang', '2012');
-
-drop table Enderecos;
-drop table Usuarios;
-drop table Jogos;
-drop table Anuncios;
+INSERT INTO Jogos (nome, produtora, ano) 
+	VALUES ('Fortnite', 'Epic Games', '2017');

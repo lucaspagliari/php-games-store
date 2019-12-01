@@ -33,7 +33,7 @@
                     <input type="text" placeholder="Valor do Produto" name="valor" required>
                     <div class="select-style">
                         <select name="jogo">
-                            <option default>Select Your Game</option>
+                            <option default>Selecione o Jogo</option>
                     <?php
             
                         require "../../api/conection.php";

@@ -9,7 +9,7 @@ if (url.includes("app")) {
             <li><a href="./jogos.php">Jogos</a></li>
             <li><a href="../forms/anuncio.php">Anunciar</a></li>
             <li><a href="./profile.php">Profile</a></li>
-            <li><a href="./forms/login.php">Login</a></li>
+            <li><a href="../forms/login.php">Login</a></li>
             `;
 } else if (url.includes("forms")) {
     navbarStructure += `

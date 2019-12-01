@@ -26,20 +26,24 @@
     <div class="container">
         <div class="product-container main-product-container">
             <div class="product-left-container">
-                <img src=""
-                    alt="" height="450px" />
+                <img src="<?php echo "../img/$id.png" ?>" alt="" height="400px" width="542px" />
             </div>
             <div class="product-col-container">
                 <h1 class="product-page"><?php echo $nome ?></h1>
                 Ano: <?php echo $ano ?><br>
                 Produtora: <?php echo $produtora ?><br>
+                <br>
                 <h3>Anuncios sobre este produto:</h3> 
-                    <b><?php 
+                        <a  class="anuncio" href="./compra.php">
+                    <?php 
                     $result1 = mysqli_query($conn, "SELECT * FROM `anuncios` WHERE `id` = '$id' ");
                     foreach ($result1 as $row) {
                         $titulo = $row["titulo"];
-                        echo $titulo;
-                    }?> </b>               
+                        $valor = $row["valor"];
+                        echo " <div>$titulo</div> <div>R$$valor.00</div>";
+                    }?> 
+                        <img src="../img/shopping-cart.svg" height="20px">
+                    </a>
             </div>
         </div>
         <br clear="all" />

@@ -29,7 +29,7 @@ body {
     margin:0;
   }
   p.product-body {
-    font-size: 12px;
+    font-size: 19px;
     line-height: 20px;
     font-weight: 400;
   }
@@ -83,4 +83,39 @@ body {
     font-family: "Open Sans";
     font-size: 14px;
     font-weight: 400;
+  }
+
+  h2.product-page {
+    font-weight: 300;
+  }
+  .anuncio {
+    display: grid;
+    grid-template-columns: 50% 40% 10%;
+    grid-template-rows: 25px;
+    background-color: #afafaf28;
+    border-radius: 10px;
+    padding: 10px;
+    height: 250px;
+    overflow-y: scroll;
+  }
+  .anuncio > div {
+    margin: 4px 0 0 0;
+    font-weight: 300;
+    transition-duration: 300ms;
+  }
+  .anuncio:hover {
+    color: rgb(38, 136, 38);
+    cursor: pointer;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  a {
+    text-decoration: none;
+    color: #000;
   }

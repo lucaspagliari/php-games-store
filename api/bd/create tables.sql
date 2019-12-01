@@ -21,7 +21,7 @@ CREATE TABLE Anuncios (
 	valor float (10) not null,
 	cpf varchar (13),
 	id int (5),
-	data DATETIME NOT NULL CURRENT_TIMESTAMP,
+	data DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	primary key (idanuncio),
 	foreign key (cpf) references Usuarios (cpf),
 	foreign key (id) references Jogos (id)

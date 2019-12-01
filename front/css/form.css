@@ -202,3 +202,28 @@ input {
 .container.right-panel-active .overlay-right {
 	transform: translateX(20%);
 }
+
+.select-style {
+	padding: 10px 15px;
+    margin: 8px 0;
+	width: 100%;
+	overflow: hidden;
+	background-color: #eee;
+}
+
+.select-style select {
+	padding: 0px;
+	width: 100%;
+	color: rgb(114, 114, 114);
+	border: none;
+	box-shadow: none;
+	background-color: transparent;
+	background-image: none;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+			appearance: none;
+  }
+  
+  .select-style select:focus {
+	outline: none;
+  }

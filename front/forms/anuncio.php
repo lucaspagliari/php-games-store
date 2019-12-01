@@ -26,11 +26,14 @@
                     <h1>Seu Anúncio</h1>
                     <input type="text" placeholder="Titulo" name="titulo" required>
                     <input type="text" placeholder="Valor do Produto" name="valor" required>
-                    <select name ="jogo">
-                    <option value="jogo1">Jogo 1</option>
-                    <option value="jogo2">Jogo 2</option>
-                    <option value="jogo3">Jogo 3</option>
-                    </select>
+                    <div class="select-style">
+                        <select name="jogo">
+                            <option default>Select Your Game</option>
+                            <option value="jogo1">Jogo 1</option>
+                            <option value="jogo2">Jogo 2</option>
+                            <option value="jogo3">Jogo 3</option>
+                        </select>
+                    </div>
                     <input type="text" placeholder="Descricao" name="descricao" required>
                     <input type="text" name="register" value="true" style="display: none"><br>
                     <button type="submit">Anunciar</button>

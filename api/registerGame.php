@@ -13,7 +13,7 @@ if (isset($_POST['register'])) {
         $sql = "INSERT INTO Jogos (nome, produtora, ano)
         VALUES ('$nome', '$produtora', '$ano')";
         $result = mysqli_query($conn, $sql);
-        header("Location: ../front/app/announceForm.php?message=game_created");
+        header("Location: ../front/forms/anuncio.php?message=game_created");
         
     }
 

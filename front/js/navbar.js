@@ -1,1 +1,1 @@
-const element = document.querySelector("#nav-app")
+const element = document.querySelector("#nav-app");

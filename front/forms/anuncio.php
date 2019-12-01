@@ -20,6 +20,7 @@
                     <input type="text" placeholder="Nome do Jogo" name="nome" required>
                     <input type="text" placeholder="Produtor (a)" name="produtora" required> 
                     <input type="text" placeholder="Ano de Lançamento" name="ano" required> 
+                    <textarea rows="4" cols="50" name="descricao" placeholder = "descreva o jogo"></textarea>
                     <input type="text" name="register" value="true" style="display: none"><br>
                     <button type="submit" >Registrar</button>
                 </form>

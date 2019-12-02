@@ -14,13 +14,14 @@ if (isset($_POST['register'])) {
         VALUES ('$nome', '$produtora', '$ano', '$descricao')";
         $result = mysqli_query($conn, $sql);        
 
-        $sql = "SELECT * FROM Jogos ORDER BY id DESCLIMIT 1";
+        $sql = "SELECT * FROM Jogos ORDER BY id DESC LIMIT 1";
         $result = mysqli_query($conn, $sql);
         foreach ($result as $row) {
             $id = $row["id"];
         }
+        
         $target_dir = "../front/img/";
-        $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        $target_file = $target_dir . $id . ".png";
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         // Check if image file is a actual image or fake image
@@ -54,6 +55,7 @@ if (isset($_POST['register'])) {
         if ($uploadOk == 0) {
             echo "Sorry, your file was not uploaded.";
         // if everything is ok, try to upload file
+        
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";

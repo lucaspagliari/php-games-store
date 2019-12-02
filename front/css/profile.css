@@ -58,14 +58,13 @@ body {
   max-width: 1200px;
   margin: 20px auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-column-gap: 50px;
 }
 @media (min-width: 800px) {
   .cards {
     margin-top: -200px;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 0.5fr;
   
   }
 }
@@ -80,9 +79,6 @@ body {
   height: 8em;
   box-shadow: 0 2px 4px rgba(29,28,33,0.2);
   transition-duration: 300ms;
-}
-.card:hover {
-  background-color: #eae9ec;
 }
 .card:focus {
   outline: 2px solid #0d62e0;
@@ -122,4 +118,8 @@ body {
 
 .btn:hover {
   background-color: rgba(202, 202, 202, 0.336);
+}
+
+ol.cards > li {
+  margin-bottom: 20px
 }

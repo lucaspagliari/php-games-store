@@ -11,7 +11,6 @@
 <body>
     <nav id="nav-app"></nav>
 
-    <form action="./detalhado.php" method="post">
     <?php
         require "../../api/conection.php";
         session_start();
@@ -27,10 +26,12 @@
                 <p class='profile-card__subtitle'>$email</p><img class='profile-card__avatar'
                     src='https://gravatar.com/avatar/56d18ba2b0bf189436499b0f215b5e29?s=100' alt='Avatar for Bart Veneman'>
             </div>
-        </div>
-        <div class='profile-projects '>
-            <ol class='cards'>";
-
+        </div>";
+        echo $text;
+    ?>
+    <div class='profile-projects '>
+            <ol class='cards'>
+    <?php   
         $result = mysqli_query($conn, "SELECT * FROM Anuncios WHERE cpf='$cpf'");
         
             try {
@@ -40,26 +41,27 @@
                     $descricao = $row["descricao"];
                     $valor = $row["valor"];
     
-                    $text .= "
-                        <li><a class='card' >
-                            <input class='hide' name='jogoid' type='text' value='$jogo_id'>
-                            <h4 class='card__title'>$titulo</h4>
-                            <p class='card__meta'>$valor
-                            <time>$descricao</time>
-                            </p>
-                            <button type='submit' class='btn card_btn'>Ver Jogo</button>
-                            </a></li>";
+                    $text = "
+                        <li>
+                            <form class='card' action='./detalhado.php' method='post'>
+                                <input class='hide' name='jogoid' type='text' value='$jogo_id'>
+                                <h4 class='card__title'>$titulo</h4>
+                                <p class='card__meta'>$valor</p>
+                                <p>$descricao</p>
+                                <button type='submit' class='btn card_btn'>Ver Jogo</button>
+                            </form>
+                        </li>";
+                    echo $text;   
+
                 }
             } catch (Throwable $th) {
-                $text .= "<div class='profile-projects'>
+                $text = "<div class='profile-projects'>
                     <ol class='cards'>
                     <p class='card__meta'>Sem Anúncios</p>";
-            }
-         
-        echo $text . "</ol></div>";
-
+                    echo $text;
+            }  
     ?>
-    </form>
+    </ol></div>
     <script src="../js/navbar.js"></script>
 </body>
 </html>

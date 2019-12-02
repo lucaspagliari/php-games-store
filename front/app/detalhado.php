@@ -33,16 +33,27 @@
                 Produtora: <?php echo $produtora ?><br>
                 <br>
                 <h3>Anuncios sobre este produto:</h3> 
-                        <a  class="anuncio" href="./confirmar.php">
-                    <?php 
+                    <div class="todos-anuncios">
+
+                        <?php 
                     $result1 = mysqli_query($conn, "SELECT * FROM `anuncios` WHERE `id` = '$id' ");
                     foreach ($result1 as $row) {
                         $titulo = $row["titulo"];
                         $valor = $row["valor"];
-                        echo " <div>$titulo</div> <div>R$$valor</div>";
+                        $id = $row["id"];
+                        echo " 
+                        <form  class='cards_item' action='./confirmar.php' method='post'>
+                        
+                            <div class='anuncio'>
+                                <div>$titulo</div>
+                                <div>R$$valor</div>
+                                <input class='hide' type='number' name='jogoid' value='$id'>
+                                <button type='submit' class='btn'>Comprar</button>
+                            </div>
+                        </form>
+                        ";
                     }?> 
-                        <img src="../img/shopping-cart.svg" height="20px">
-                    </a>
+                    </div>
             </div>
         </div>
         <br clear="all" />

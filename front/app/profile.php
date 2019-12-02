@@ -29,7 +29,7 @@
             <div class='profile-card'>
                 <h1 class='profile-card__title'>$nome</h1>
                 <p class='profile-card__subtitle'>$email</p><img class='profile-card__avatar'
-                    src='https://gravatar.com/avatar/56d18ba2b0bf189436499b0f215b5e29?s=100' alt='Avatar for Bart Veneman'>
+                    src='../img/user.png' alt='Avatar for Bart Veneman'>
             </div>
         </div>";
         echo $text;
@@ -38,33 +38,31 @@
             <ol class='cards'>
     <?php   
         $result = mysqli_query($conn, "SELECT * FROM Anuncios WHERE cpf='$cpf'");
-        
-            try {
-                foreach ($result as $row) {
-                    $jogo_id = $row["id"];
-                    $titulo = $row["titulo"];
-                    $descricao = $row["descricao"];
-                    $valor = $row["valor"];
-    
-                    $text = "
-                        <li>
-                            <form class='card' action='./detalhado.php' method='post'>
-                                <input class='hide' name='jogoid' type='text' value='$jogo_id'>
-                                <h4 class='card__title'>$titulo</h4>
-                                <p class='card__meta'>$valor</p>
-                                <p>$descricao</p>
-                                <button type='submit' class='btn card_btn'>Ver Jogo</button>
-                            </form>
-                        </li>";
-                    echo $text;   
+        if (mysqli_num_rows($result) != 0) {
+            foreach ($result as $row) {
+                $jogo_id = $row["id"];
+                $titulo = $row["titulo"];
+                $descricao = $row["descricao"];
+                $valor = $row["valor"];
 
-                }
-            } catch (Throwable $th) {
-                $text = "<div class='profile-projects'>
-                    <ol class='cards'>
-                    <p class='card__meta'>Sem Anúncios</p>";
-                    echo $text;
-            }  
+                $text = "
+                    <li>
+                        <form class='card' action='./detalhado.php' method='post'>
+                            <input class='hide' name='jogoid' type='text' value='$jogo_id'>
+                            <h4 class='card__title'>$titulo</h4>
+                            <p class='card__meta'>$valor</p>
+                            <p>$descricao</p>
+                            <button type='submit' class='btn card_btn'>Ver Jogo</button>
+                        </form>
+                    </li>";
+                echo $text;   
+            }
+        } else {
+            $text = "<li>
+                <p class='card__meta'>Não existem anúncios na sua conta</p>
+            </li>";
+            echo $text;
+        }
     ?>
     </ol></div>
     <script src="../js/navbar.js"></script>

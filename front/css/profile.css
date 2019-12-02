@@ -11,8 +11,9 @@ body {
 
 }
 .profile-card {
-  background-color: #808080c5;
-  color: #050506;
+  background: -webkit-linear-gradient(to bottom, #f7f7f7, #1173a4);
+	background: linear-gradient(to bottom, #f7f7f7, #1173a4);
+  color: #0d1c31;
   padding: 3vw 5vw;
   text-align: center;
   border-radius: 5px;
@@ -27,7 +28,7 @@ body {
 .profile-card__title {
   font-weight: 500;
   font-style: normal;
-  color: #eee;
+  color: rgb(112, 87, 255);
   text-decoration: none;
   letter-spacing: 0.04em;
   line-height: 1;

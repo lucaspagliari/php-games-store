@@ -21,6 +21,14 @@ if (url.includes("app")) {
             <li><a href="./login.php">Login</a></li>
             <li><a href="../../api/logout.php">Logout</a></li>
             `;
+} else if (url.includes("login.php")) {
+    navbarStructure += `
+            <li><a href="../index.php">Início</a></li>
+            <li><a href="../app/jogos.php">Jogos</a></li>
+            <li><a href="./anuncio.php">Anunciar</a></li>
+            <li><a href="../app/profile.php">Profile</a></li>
+            <li><a href="./login.php">Login</a></li>
+            `;
 } else {
     navbarStructure += `
             <li><a href="./index.php">Início</a></li>

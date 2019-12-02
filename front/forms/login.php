@@ -40,7 +40,7 @@
                     <?php
                         $error = isset($_GET['error']) ? $_GET['error'] : '';
                         if ($error == 'user_not_found') {
-                            echo '<h3>Usuário não encontrado!</h3>';
+                            echo '<p>Usuário não encontrado!</p>';
                         }
                     ?>
                 </form>
@@ -61,6 +61,42 @@
             </div>
         </div>
     </div>
+
+    <?php
+        $error = isset($_GET['error']);
+        
+        if ($error) {
+            $error = $_GET['error'];
+            switch ($error) {
+                case 'cpf_already_registred':
+                    $msg = 'CPF já registrado';
+                    break;
+                case 'email_already_registred':
+                    $msg = 'Email já registrado';
+                    break;
+                case 'email_invalid':
+                    $msg = 'Email inválido';
+                    break;
+                case 'user_not_found':
+                    $msg = 'Usuário não encontrado';
+                    break;
+                
+                default:
+                    $msg = 'Dados Inválidos';
+                    break;
+            }
+            
+            echo "
+                <script>
+                    alert('$msg')
+                
+                </script>
+                            
+            
+            ";
+        }
+
+    ?>
     <script src="../js/navbar.js"></script>
     <script src="../js/form.js"></script>
 </body>

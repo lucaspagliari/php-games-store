@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
 	<title>Game Store</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="images/icons/favicon.png" />
-	<!--===============================================================================================-->
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
-	<!--===============================================================================================-->
+<!--===============================================================================================-->
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-	<!--===============================================================================================-->
+<!--===============================================================================================-->		
 	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
-	<!--===============================================================================================-->
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<!--===============================================================================================-->
-</head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-<body>
+<!--===============================================================================================-->
+</head>
+<body>	
 	<!-- Header -->
 	<header>
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<div class="wrap-menu-desktop">
 				<nav class="limiter-menu-desktop container">
-
-					<!-- Logo desktop -->
+					
+					<!-- Logo desktop -->		
 					<a href="#" class="logo">
-						<img src="images/icons/logo.png" alt="IMG-LOGO">
+						<img src="images/icons/favicon.png" height= "36px" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
@@ -48,20 +43,28 @@
 							<li>
 								<a href="product-detail.html">Produtos</a>
 							</li>
+							<nav>
+									<li class="nav-item dropdown">
+											<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											  Meu Perfil
+											</a>
+											<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+											  <a class="dropdown-item" href="app/form.php">Minha conta</a>
+											</div>
+									</li>
 
+							</nav>
 						</ul>
-					</div>
+					</div>	
 
 					<!-- Icon header -->
 					<div class="wrap-icon-header flex-w flex-r-m">
-
-						<div class="icon-header-item cl0 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
-							data-notify="2">
+						<div class="icon-header-item cl4 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
 							<i class="zmdi zmdi-shopping-cart"></i>
 						</div>
 					</div>
 				</nav>
-			</div>
+			</div>	
 		</div>
 	</header>
 
@@ -75,25 +78,23 @@
 					Meu carrinho
 				</span>
 
-				<div class="fs-35 lh-10 cl0 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart">
+				<div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart">
 					<i class="zmdi zmdi-close"></i>
 				</div>
 			</div>
 			<div class="w-full">
-				<div class="header-cart-total w-full p-tb-40">
-					Total:
-				</div>
+					<div class="header-cart-total w-full p-tb-40">
+						Total: 
+					</div>
 
-				<div class="header-cart-buttons flex-w w-full">
-					<a href="shoping-cart.html"
-						class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
-						Ver meus jogos
-					</a>
+					<div class="header-cart-buttons flex-w w-full">
+						<a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+							Ver meus jogos
+						</a>
 
-					<a href="shoping-cart.html"
-						class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
-						Finalizar
-					</a>
+						<a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+							Finalizar
+						</a>
 				</div>
 			</div>
 		</div>
@@ -111,16 +112,15 @@
 									Entre em um Novo Mundo
 								</span>
 							</div>
-
+								
 							<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
 								<h2 class="ltext-201 cl0 p-t-19 p-b-43 respon1">
 									FORTINITE
 								</h2>
 							</div>
-
+								
 							<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-								<a href="product-detail-1.html"
-									class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+								<a href="product-detail-1.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Baixe agora
 								</a>
 							</div>
@@ -136,17 +136,15 @@
 									League of
 								</span>
 							</div>
-
-							<div class="layer-slick1 animated visible-false" data-appear="lightSpeedIn"
-								data-delay="800">
+								
+							<div class="layer-slick1 animated visible-false" data-appear="lightSpeedIn" data-delay="800">
 								<h2 class="ltext-201 cl0 p-t-19 p-b-43 respon1">
 									Legends
 								</h2>
 							</div>
-
+								
 							<div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
-								<a href="product-detail-2.html"
-									class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+								<a href="product-detail-2.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Baixe agora
 								</a>
 							</div>
@@ -157,23 +155,20 @@
 				<div class="item-slick1" style="background-image: url(images/Overwatch.jpg);">
 					<div class="container h-full">
 						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
-							<div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft"
-								data-delay="0">
+							<div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft" data-delay="0">
 								<span class="ltext-101 cl0 respon2">
 									Edição Origins
 								</span>
 							</div>
-
-							<div class="layer-slick1 animated visible-false" data-appear="rotateInUpRight"
-								data-delay="800">
+								
+							<div class="layer-slick1 animated visible-false" data-appear="rotateInUpRight" data-delay="800">
 								<h2 class="ltext-201 cl0 p-t-19 p-b-43 respon1">
 									Overwatch
 								</h2>
 							</div>
-
+								
 							<div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
-								<a href="product-detail-3.html"
-									class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+								<a href="product-detail-3.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Compre agora
 								</a>
 							</div>
@@ -199,8 +194,7 @@
 						<div class="block2-pic hov-img0">
 							<img src="images/Big-farm.jpg" alt="IMG-PRODUCT">
 
-							<a href="#"
-								class="block2-btn flex-c-m stext-103 cl0 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
 								Veja mais
 							</a>
 						</div>
@@ -224,8 +218,7 @@
 						<div class="block2-pic hov-img0">
 							<img src="images/Fifa-20.jpg" alt="IMG-PRODUCT">
 
-							<a href="#"
-								class="block2-btn flex-c-m stext-103 cl0 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
 								Veja mais
 							</a>
 						</div>
@@ -249,8 +242,7 @@
 						<div class="block2-pic hov-img0">
 							<img src="images/Asphalt.jpg" alt="IMG-PRODUCT">
 
-							<a href="#"
-								class="block2-btn flex-c-m stext-103 cl0 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
 								Veja mais
 							</a>
 						</div>
@@ -273,10 +265,9 @@
 					<!-- Block2 -->
 					<div class="block2">
 						<div class="block2-pic hov-img0">
-							<img src="images/css.png" alt="IMG-PRODUCT">
+							<img src="images/GTA.jpg" alt="IMG-PRODUCT">
 
-							<a href="#"
-								class="block2-btn flex-c-m stext-103 cl0 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
 								Veja mais
 							</a>
 						</div>
@@ -284,7 +275,7 @@
 						<div class="block2-txt flex-w flex-t p-t-14">
 							<div class="block2-txt-child1 flex-col-l ">
 								<a href="product-detail-7.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-									Counter Strike Source
+									Grand Theft Auto
 								</a>
 
 								<span class="stext-105 cl3">
@@ -296,7 +287,7 @@
 				</div>
 
 				<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
-				</div>
+		</div>
 	</section>
 	<!-- Footer -->
 	<footer class="bg3 p-t-75 p-b-32">
@@ -309,19 +300,19 @@
 
 					<ul>
 						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="#" class="stext-107 cl4 hov-cl1 trans-04">
 								Início
 							</a>
 						</li>
 
 						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="#" class="stext-107 cl4 hov-cl1 trans-04">
 								Produtos
 							</a>
 						</li>
 
 						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="#" class="stext-107 cl4 hov-cl1 trans-04">
 								Meu Perfil
 							</a>
 						</li>
@@ -332,17 +323,16 @@
 						SOBRE NÓS
 					</h4>
 
-					<p class="stext-107 cl7 size-201">
-						Game Store é uma loja de jogos virtuais desde XXXX, conta com mais de XX anos de experiência.
-					</p>
+					<p class="stext-107 cl4 size-201">
+						Game Store é uma loja de jogos virtuais desde XXXX, conta com mais de XX anos de experiência.</p>
 					</p>
 
 					<div class="p-t-27">
-						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+						<a href="#" class="fs-18 cl4 hov-cl1 trans-04 m-r-16">
 							<i class="fa fa-facebook"></i>
 						</a>
 
-						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+						<a href="#" class="fs-18 cl4 hov-cl1 trans-04 m-r-16">
 							<i class="fa fa-instagram"></i>
 						</a>
 					</div>
@@ -352,7 +342,7 @@
 					<h4 class="stext-301 cl0 p-b-30">
 						Endereço
 					</h4>
-					<p class="stext-107 cl7 size-201">
+					<p class="stext-107 cl4 size-201">
 						1760 - Av. União dos Ferroviários -Centro, Jundiaí - SP, 13201-160
 					</p>
 				</div>
@@ -360,7 +350,7 @@
 					<h4 class="stext-301 cl0 p-b-30">
 						Telefone
 					</h4>
-					<p class="stext-107 cl7 size-201">(11) 4522-7549</p>
+					<p class="stext-107 cl4 size-201">(11) 4522-7549</p>					
 				</div>
 			</div>
 
@@ -379,17 +369,12 @@
 					</a>
 
 					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
+							<img src="images/icons/icon-pay-04.png" height ="25px" width= "35px" alt="ICON-PAY">
 					</a>
 				</div>
 
-				<p class="stext-107 cl6 txt-center">
-					Copyright &copy; 2019 Todos os direitos reservados | Feito por <a href="#" target="_blank">Game
-						Store</a></a>
+				<p class="stext-107 cl4 txt-center">
+Copyright &copy; 2019 Todos os direitos reservados | Feito por <a href="#" target="_blank">Game Store</a></a>
 				</p>
 			</div>
 		</div>
@@ -403,30 +388,29 @@
 	</div>
 
 
-	<!--===============================================================================================-->
+<!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-	<!--===============================================================================================-->
+<!--===============================================================================================-->
 	<script src="vendor/animsition/js/animsition.min.js"></script>
-	<!--===============================================================================================-->
+<!--===============================================================================================-->
 	<script src="vendor/bootstrap/js/popper.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-	<!--===============================================================================================-->
+<!--===============================================================================================-->
 	<script>
-		$(".js-select2").each(function () {
+		$(".js-select2").each(function(){
 			$(this).select2({
 				minimumResultsForSearch: 20,
 				dropdownParent: $(this).next('.dropDownSelect2')
 			});
 		})
 	</script>
-	<!--===============================================================================================-->
+<!--===============================================================================================-->
 	<script src="vendor/slick/slick.min.js"></script>
 	<script src="js/slick-custom.js"></script>
-	<!--===============================================================================================-->
+<!--===============================================================================================-->
 	<script src="vendor/isotope/isotope.pkgd.min.js"></script>
-	<!--===============================================================================================-->
+<!--===============================================================================================-->
 	<script src="js/main.js"></script>
 
 </body>
-
 </html>

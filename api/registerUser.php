@@ -27,11 +27,10 @@ if (isset($_POST['register'])) {
         $result2 = mysqli_query($conn, "SELECT * FROM Usuarios WHERE email='$email'");
         
         if (mysqli_num_rows($result) != 0) {
-            header("Location: ../front/app/form.php?error=cpf_already_registred");
+            header("Location: ../front/forms/login.php?error=cpf_already_registred");
         
         } else if (mysqli_num_rows($result2) != 0) {
-            header("Location: ../front/app/form.php?error=email_already_registred");
-
+            header("Location: ../front/forms/login.php?error=email_already_registred");
         } else {
          
         //fazer check?

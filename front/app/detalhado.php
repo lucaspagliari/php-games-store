@@ -43,23 +43,35 @@
 
                         <?php 
                     $result1 = mysqli_query($conn, "SELECT * FROM `anuncios` WHERE `id` = '$id' ");
-                    foreach ($result1 as $row) {
-                        $idanun = $row["idanuncio"];
-                        $titulo = $row["titulo"];
-                        $valor = $row["valor"];
-                        $id = $row["id"];
+                    if (mysqli_num_rows($result1) != 0) {
+                        foreach ($result1 as $row) {
+                            $idanun = $row["idanuncio"];
+                            $titulo = $row["titulo"];
+                            $valor = $row["valor"];
+                            $id = $row["id"];
+                            echo " 
+                            <form  class='cards_item' action='./confirmar.php' method='post'>
+                            
+                                <div class='anuncio'>
+                                    <div>$titulo</div>
+                                    <div>R$$valor</div>
+                                    <input class='hide' type='number' name='anunid' value='$idanun'>
+                                    <button type='submit' class='btn'><img></img></button>
+                                </div>
+                            </form>
+                            ";
+                        }
+                    } else {
                         echo " 
-                        <form  class='cards_item' action='./confirmar.php' method='post'>
-                        
-                            <div class='anuncio'>
-                                <div>$titulo</div>
-                                <div>R$$valor</div>
-                                <input class='hide' type='number' name='anunid' value='$idanun'>
-                                <button type='submit' class='btn'>Comprar</button>
-                            </div>
-                        </form>
-                        ";
-                    }?> 
+                            <form  class='cards_item' action='./confirmar.php' method='post'>
+                            
+                                <div class='anuncio'>
+                                    <div class='spann'>Nenhuma venda disponível</div>
+                                </div>
+                            </form>
+                            ";
+                    }
+                    ?> 
                     </div>
             </div>
         </div>

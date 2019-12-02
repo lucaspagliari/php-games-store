@@ -135,3 +135,7 @@ body {
   .hide {
     display: none
   }
+
+  .spann {
+    grid-column: 1/3;
+  }

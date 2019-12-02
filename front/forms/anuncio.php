@@ -15,12 +15,13 @@
         <div class="container" id="container">
             <!-- REGISTRAR JOGO -->
             <div class="form-container sign-up-container">
-                <form action="../../api/registerGame.php" method="post">
+                <form action="../../api/registerGame.php" method="post" enctype="multipart/form-data">
                 <h1>Sobre o Jogo</h1>
                     <input type="text" placeholder="Nome do Jogo" name="nome" required>
                     <input type="text" placeholder="Produtor (a)" name="produtora" required> 
                     <input type="text" placeholder="Ano de Lançamento" name="ano" required> 
-                    <textarea rows="4" cols="50" name="descricao" placeholder = "descreva o jogo"></textarea>
+                    <textarea rows="4" cols="38" name="descricao" placeholder = "   Descreva o Jogo"></textarea>
+                    <input type="file" name="fileToUpload" id="fileToUpload">
                     <input type="text" name="register" value="true" style="display: none"><br>
                     <button type="submit" >Registrar</button>
                 </form>

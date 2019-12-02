@@ -20,6 +20,7 @@
             $bairro = $row["bairro"];
             $cep = $row["cep"];
         }
+        //$result2 = mysqli_query($conn, "DELETE FROM `anuncios` WHERE `idanuncio` = 1");
     ?>
 
     <nav id="nav-app"></nav>
@@ -30,5 +31,6 @@
         <?php echo $rua . " " . $numero . " " . $bairro . " - " . $cep
          ?>
     </font> </h2>
+
 </body>
 </html>

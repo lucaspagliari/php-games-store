@@ -10,6 +10,7 @@
 </head>
 <body>
     <?php
+    
         require "../../api/conection.php";
         $id = $_POST['anunid'];
         session_start();

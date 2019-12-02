@@ -22,9 +22,9 @@
                     <input type="password" placeholder="Senha" name="senha" required>
                     <input type="text" placeholder="CPF"  id="cpf" name="cpf" maxlength="11" required>
                     <input type="text" placeholder="Rua" name="rua" required>
-                    <input type="text" placeholder="Numero" name="numero" required>
+                    <input type="number" placeholder="Numero" name="numero" required>
                     <input type="text" placeholder="Bairro" name="bairro" required>
-                    <input type="text" placeholder="CEP" name="cep" maxlength="8" required>
+                    <input type="number" placeholder="CEP" name="cep" maxlength="8" required>
                     <input type="text" name="register" value="true" style="display: none">
                     <button type="submit" >Cadastre-se</button>
                 </form>
@@ -63,11 +63,20 @@
     </div>
 
     <?php
-        $mensagem = isset($_GET['game_created']);
+        $mensagem = isset($_GET['message']);
         $error = isset($_GET['error']);
         if ($mensagem) {
-            $mensagem = $_GET['game_created'];
-            
+            $mensagem = $_GET['message'];
+            switch ($mensagem) {
+                case 'user_created':
+                    $msg = 'Usuário Criado';
+                break;
+                case 'no_user_loggedin':
+                    $msg = 'É necessário fazer o login';
+                break;
+            }
+            echo "<script>alert('$msg')</script>";
+
         } elseif ($error) {
             $error = $_GET['error'];
             switch ($error) {
@@ -87,8 +96,7 @@
                 default:
                     $msg = 'Dados Inválidos';
                     break;
-            }
-            
+            }    
             echo "<script>alert('$msg')</script>";
         }
 

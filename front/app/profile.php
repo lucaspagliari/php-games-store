@@ -13,7 +13,12 @@
 
     <?php
         require "../../api/conection.php";
+        
         session_start();
+        $logado = isset($_SESSION['logado']) ? $_SESSION['logado'] : FALSE;
+        if (!$logado) {
+            header("Location: ../forms/login.php?message=no_user_loggedin");
+        }
 
         $nome = $_SESSION['nome'];
         $email = $_SESSION['email'];

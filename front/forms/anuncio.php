@@ -9,6 +9,14 @@
     <title>Loja de Game</title>
 </head>
 <body>
+
+    <?php
+        session_start();
+        $logado = isset($_SESSION['logado']) ? $_SESSION['logado'] : FALSE;
+        if (!$logado) {
+            header("Location: ../forms/login.php?message=no_user_loggedin");
+        }
+    ?>
     <nav id="nav-app"></nav>
     <div id="main">
 
@@ -19,7 +27,7 @@
                 <h1>Sobre o Jogo</h1>
                     <input type="text" placeholder="Nome do Jogo" name="nome" required>
                     <input type="text" placeholder="Produtor (a)" name="produtora" required> 
-                    <input type="text" placeholder="Ano de Lançamento" name="ano" required> 
+                    <input type="number" placeholder="Ano de Lançamento" name="ano" required> 
                     <textarea rows="4" cols="38" name="descricao" placeholder = "   Descreva o Jogo"></textarea>
                     <input type="file" name="fileToUpload" id="fileToUpload">
                     <input type="text" name="register" value="true" style="display: none"><br>
@@ -31,7 +39,7 @@
                 <form action="../../api/registerAnnounce.php" method="post">
                     <h1>Seu Anúncio</h1>
                     <input type="text" placeholder="Titulo" name="titulo" required>
-                    <input type="text" placeholder="Valor do Produto" name="valor" required>
+                    <input type="number" placeholder="Valor do Produto" name="valor" required>
                     <div class="select-style">
                         <select name="jogo">
                             <option default>Selecione o Jogo</option>
@@ -85,6 +93,8 @@
                     $msg = 'Fazer o login';
                 break;
             }
+            echo "<script>alert('$msg')</script>";
+
         } elseif ($error) {
             $error = $_GET['error'];
             switch ($error) {
@@ -98,9 +108,9 @@
                     $msg = 'Dados Inválidos';
                     break;
             }
-            
             echo "<script>alert('$msg')</script>";
         }
+        
     ?>
 
     <script src="../js/navbar.js"></script>

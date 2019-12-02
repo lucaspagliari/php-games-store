@@ -11,12 +11,17 @@
 </head>
 
 <body>
-    
+    <?php
+        session_start();
+        $logado = isset($_SESSION['logado']) ? $_SESSION['logado'] : FALSE;
+        if (!$logado) {
+            header("Location: ../forms/login.php?message=no_user_loggedin");
+        }
+    ?>
     <!-- dynamic navbar -->
     <nav id="nav-app"></nav>
     <div class="main">
         <h1 class="main-title">Lista de Jogos</h1>
-
         <ul class="cards">
             <?php
                 require "../../api/conection.php";

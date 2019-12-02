@@ -31,7 +31,7 @@ if (isset($_POST['register'])) {
         $sql = "INSERT INTO Anuncios (titulo , descricao , valor , cpf , id)
         VALUES ('$titulo', '$descricao' , '$valor' , (SELECT cpf from usuarios WHERE email='$email') , (SELECT id from Jogos WHERE nome='$nome'))";
         $result3 = mysqli_query($conn, $sql);
-        header("Location: ../front/forms/anuncio.php?message=game_created");
+        header("Location: ../front/app/jogos.php");
         }
     } else {    
         header('Location: ../front/forms/anuncio.php?error=bad_input');

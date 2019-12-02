@@ -9,6 +9,12 @@
 </head>
 <body>
     <?php   
+        session_start();
+        $logado = isset($_SESSION['logado']) ? $_SESSION['logado'] : FALSE;
+        if (!$logado) {
+            header("Location: ../forms/login.php?message=no_user_loggedin");
+        }
+
         require '../../api/conection.php';
 
             $id = $_POST['jogoid'];

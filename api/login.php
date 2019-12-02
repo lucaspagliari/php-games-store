@@ -20,7 +20,7 @@ if (isset($_POST['login'])) {
                 header('Location: ../front/app/jogos.php');
             }   
         } else {
-            header('Location: ../front/formS/login.php?error=user_not_found');
+            header('Location: ../front/form/login.php?error=user_not_found');
         }
         mysqli_close($conn);
     } else {    

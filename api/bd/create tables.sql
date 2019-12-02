@@ -1,7 +1,3 @@
-drop table Usuarios;
-drop table Enderecos;
-drop table Anuncios;
-drop table Jogos;
 
 CREATE TABLE Usuarios (
 	cpf varchar (13) not null,

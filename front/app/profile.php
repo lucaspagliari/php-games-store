@@ -58,8 +58,14 @@
                 echo $text;   
             }
         } else {
-            $text = "<li>
-                <p class='card__meta'>Não existem anúncios na sua conta</p>
+            $text = "
+            <li>
+                <form class='card' action='../forms/anuncio.php' method='post'>
+                    <p class='card__meta'>Nenhum anúncio foi feito ainda...</p>
+                    <h4 class='card__title'></h4>
+                    <p></p>
+                    <button type='submit' class='btn card_btn'>Fazer Anúncio</button>
+                </form>
             </li>";
             echo $text;
         }

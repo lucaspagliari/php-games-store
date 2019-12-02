@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Profile</title>
+    <title>Meu perfil</title>
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/profile.css">
 </head>
@@ -19,7 +19,7 @@
         if (!$logado) {
             header("Location: ../forms/login.php?message=no_user_loggedin");
         }
-
+        
         $nome = $_SESSION['nome'];
         $email = $_SESSION['email'];
         $cpf = $_SESSION['cpf'];

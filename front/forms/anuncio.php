@@ -71,6 +71,38 @@
             </div>
         </div>
     </div>
+
+    <?php
+        $error = isset($_GET['error']);
+        $mensagem = isset($_GET['message']);
+        if ($mensagem) {
+            $mensagem = $_GET['message'];
+            switch ($error) {
+                case 'game_created':
+                    $msg = 'Jogo Criado';
+                break;
+                case 'no_user_loggedin':
+                    $msg = 'Fazer o login';
+                break;
+            }
+        } elseif ($error) {
+            $error = $_GET['error'];
+            switch ($error) {
+                case 'no_game_found':
+                    $msg = 'Jogo não encontrado';
+                break;
+                case 'bad_input':
+                    $msg = 'Dados Inválidos';
+                    break;                
+                default:
+                    $msg = 'Dados Inválidos';
+                    break;
+            }
+            
+            echo "<script>alert('$msg')</script>";
+        }
+    ?>
+
     <script src="../js/navbar.js"></script>
     <script src="../js/form.js"></script>
 </body>

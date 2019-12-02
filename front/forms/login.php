@@ -63,9 +63,12 @@
     </div>
 
     <?php
+        $mensagem = isset($_GET['game_created']);
         $error = isset($_GET['error']);
-        
-        if ($error) {
+        if ($mensagem) {
+            $mensagem = $_GET['game_created'];
+            
+        } elseif ($error) {
             $error = $_GET['error'];
             switch ($error) {
                 case 'cpf_already_registred':
@@ -86,14 +89,7 @@
                     break;
             }
             
-            echo "
-                <script>
-                    alert('$msg')
-                
-                </script>
-                            
-            
-            ";
+            echo "<script>alert('$msg')</script>";
         }
 
     ?>

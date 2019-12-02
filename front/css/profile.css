@@ -11,7 +11,7 @@ body {
 
 }
 .profile-card {
-  background-color: #d4d4d4c5;
+  background-color: #808080c5;
   color: #050506;
   padding: 3vw 5vw;
   text-align: center;
@@ -58,13 +58,15 @@ body {
   max-width: 1200px;
   margin: 20px auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 50px;
 }
 @media (min-width: 800px) {
   .cards {
-    margin-top: -15vmin;
-    grid-template-columns: repeat(auto-fit, minmax(28ch, 1fr));
+    margin-top: -200px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0.5fr;
+  
   }
 }
 .card {
@@ -77,6 +79,7 @@ body {
   padding: 20px;
   height: 8em;
   box-shadow: 0 2px 4px rgba(29,28,33,0.2);
+  transition-duration: 300ms;
 }
 .card:hover {
   background-color: #eae9ec;
@@ -95,4 +98,28 @@ body {
 .card__meta {
   margin: auto 0 0 0;
   color: #9491a1;
+}
+
+.hide {
+  display: none;
+}
+
+
+.btn {
+  color: #050505;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  transition-duration: 300ms;
+}
+
+.btn:hover {
+  background-color: rgba(202, 202, 202, 0.336);
 }

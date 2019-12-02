@@ -24,7 +24,7 @@
                     <input type="text" placeholder="Rua" name="rua" required>
                     <input type="text" placeholder="Numero" name="numero" required>
                     <input type="text" placeholder="Bairro" name="bairro" required>
-                    <input type="text" placeholder="CEP" name="cep" required>
+                    <input type="text" placeholder="CEP" name="cep" maxlength="8" required>
                     <input type="text" name="register" value="true" style="display: none">
                     <button type="submit" >Cadastre-se</button>
                 </form>

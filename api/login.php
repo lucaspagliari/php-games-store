@@ -17,10 +17,10 @@ if (isset($_POST['login'])) {
                 $_SESSION['nome'] = $row['nome'];
                 $_SESSION['email'] = $row['email'];
                 $_SESSION['cpf'] = $row['cpf'];
-                header('Location: ../front/index.php');
+                header('Location: ../front/app/jogos.php');
             }   
         } else {
-            header('Location: ../front/app/form.php?error=user_not_found');
+            header('Location: ../front/form/login.php?error=user_not_found');
         }
         mysqli_close($conn);
     } else {    

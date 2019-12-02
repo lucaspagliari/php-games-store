@@ -4,7 +4,6 @@ drop table Anuncios;
 drop table Jogos;
 
 CREATE TABLE Usuarios (
-	id int auto_increment,
 	cpf varchar (13) not null,
 	nome varchar (50) not null,
 	senha varchar (50) not null,
@@ -40,7 +39,7 @@ CREATE TABLE Enderecos (
 	bairro varchar(30),
 	cep varchar(8),
 	cpf varchar(13),
-    primary key (id),
+    primary key (cpf),
 	foreign key (cpf) references Usuarios (CPF)
 );
 

@@ -13,6 +13,7 @@ CREATE TABLE Jogos (
 	produtora varchar (50) not null,
     ano int(4),
 	descricao varchar (255),
+ 	foreign key (cpf) references Usuarios (cpf),   
 	primary key (id)
 );
 

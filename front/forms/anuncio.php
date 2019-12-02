@@ -85,7 +85,7 @@
         $mensagem = isset($_GET['message']);
         if ($mensagem) {
             $mensagem = $_GET['message'];
-            switch ($error) {
+            switch ($mensagem) {
                 case 'game_created':
                     $msg = 'Jogo Criado';
                 break;

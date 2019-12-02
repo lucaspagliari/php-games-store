@@ -38,6 +38,7 @@
                         <?php 
                     $result1 = mysqli_query($conn, "SELECT * FROM `anuncios` WHERE `id` = '$id' ");
                     foreach ($result1 as $row) {
+                        $idanun = $row["idanuncio"];
                         $titulo = $row["titulo"];
                         $valor = $row["valor"];
                         $id = $row["id"];
@@ -47,7 +48,7 @@
                             <div class='anuncio'>
                                 <div>$titulo</div>
                                 <div>R$$valor</div>
-                                <input class='hide' type='number' name='jogoid' value='$id'>
+                                <input class='hide' type='number' name='anunid' value='$idanun'>
                                 <button type='submit' class='btn'>Comprar</button>
                             </div>
                         </form>

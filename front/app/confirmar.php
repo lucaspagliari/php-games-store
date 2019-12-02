@@ -11,6 +11,7 @@
 <body>
     <?php
         require "../../api/conection.php";
+        $id = $_POST['anunid'];
         session_start();
         $cpf = $_SESSION['cpf'];
         $result = mysqli_query($conn, "SELECT * FROM `enderecos` WHERE `cpf` = '$cpf' ");
@@ -20,7 +21,9 @@
             $bairro = $row["bairro"];
             $cep = $row["cep"];
         }
-        //$result2 = mysqli_query($conn, "DELETE FROM `anuncios` WHERE `idanuncio` = 1");
+
+        $result2 = mysqli_query($conn, "DELETE FROM `anuncios` WHERE `anuncios`.`idanuncio` = '$id'");
+
     ?>
 
     <nav id="nav-app"></nav>

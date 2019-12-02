@@ -9,9 +9,26 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+        require "../../api/conection.php";
+        session_start();
+        $cpf = $_SESSION['cpf'];
+        $result = mysqli_query($conn, "SELECT * FROM `enderecos` WHERE `cpf` = '$cpf' ");
+        foreach ($result as $row) {
+            $rua = $row["rua"];
+            $numero = $row["numero"];
+            $bairro = $row["bairro"];
+            $cep = $row["cep"];
+        }
+    ?>
+
     <nav id="nav-app"></nav>
-    
     <script src="../js/navbar.js"></script>
-    
+    <br>
+    <h2 align = "center">Compra confirmada! <br>
+    Seu produto chegará em alguns dias no endereço:<br><font color="#fbac0b">
+        <?php echo $rua . " " . $numero . " " . $bairro . " - " . $cep
+         ?>
+    </font> </h2>
 </body>
 </html>

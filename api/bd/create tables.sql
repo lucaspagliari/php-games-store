@@ -4,6 +4,7 @@ drop table Anuncios;
 drop table Jogos;
 
 CREATE TABLE Usuarios (
+	id int auto_increment,
 	cpf varchar (13) not null,
 	nome varchar (50) not null,
 	senha varchar (50) not null,
@@ -34,7 +35,6 @@ CREATE TABLE Anuncios (
 );
 
 CREATE TABLE Enderecos (
-	id int auto_increment,
 	rua varchar(30),
 	numero varchar(10),
 	bairro varchar(30),

@@ -35,23 +35,24 @@ if (isset($_POST['register'])) {
         } else {
          
         //fazer check?
-        
-            $sql = "INSERT INTO Enderecos (rua, numero, bairro, cep) 
-            VALUES ('$rua', '$numero', '$bairro', '$cep')";
-    
-            $result = mysqli_query($conn, $sql);       
+          
 
             $sql = "INSERT INTO Usuarios (cpf, nome, email, senha) 
                 VALUES ('$cpf', '$nome', '$email', '$senha')";
             
             $result = mysqli_query($conn, $sql);        
-            header("Location: ../front/app/form.php?message=user_created");      
-            
+  
+
+            $sql = "INSERT INTO Enderecos (rua, numero, bairro, cep, cpf) 
+            VALUES ('$rua', '$numero', '$bairro', '$cep',(SELECT cpf from usuarios WHERE cpf='$cpf') )";
+    
+            $result = mysqli_query($conn, $sql);
+            header("Location: ../front/forms/login.php?message=user_created");       
         }
   
 
     } else {    
-        header('Location: ../front/app/form.php?error=email_invalid');
+        header('Location: ../front/forms/login.php?error=email_invalid');
     }
 }
 

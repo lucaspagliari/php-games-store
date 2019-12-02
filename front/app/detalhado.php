@@ -39,7 +39,7 @@
                     foreach ($result1 as $row) {
                         $titulo = $row["titulo"];
                         $valor = $row["valor"];
-                        echo " <div>$titulo</div> <div>R$$valor.00</div>";
+                        echo " <div>$titulo</div> <div>R$$valor</div>";
                     }?> 
                         <img src="../img/shopping-cart.svg" height="20px">
                     </a>

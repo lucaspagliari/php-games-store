@@ -123,14 +123,18 @@ body {
     text-transform: uppercase;
     font-weight: 400;
     display: block;
-    width: 100%;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: transparent;
+    border: 2px solid #00d42ec5;
+    background-color: #00d42ec5;    
     transition-duration: 300ms;
+    border-radius: 50px;
   }
   .btn:hover {
-    background-color: rgba(202, 202, 202, 0.336);
+    border: 2px solid #00d42e;
+    background-color: #00d42e21;
+      
   }
   .hide {
     display: none

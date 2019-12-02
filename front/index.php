@@ -34,21 +34,21 @@
 			<div class="ls-slide" data-ls="bgsize:cover;  duration:10000; transition2d:104;">
 					<img src="img/Fortinite.jpg" class="ls-bg" alt=""/>					
 					<div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
-						<a class="btn" href="#">Jogue agora</a>
+						<a class="btn" href="./app/jogos.php">Jogue agora</a>
 						<h3 class="title"><b>Fortinite</b></h3>
 					</div>
 			</div><!-- ls-slide -->
 			<div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:10000; transition2d:104;">
 					<img src="img/LOL.jpg" class="ls-bg" alt=""/>
 					<div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
-						<a class="btn" href="#">Baixe agora</a>
+						<a class="btn" href="./app/jogos.php">Jogue agora</a>
 						<h3 class="title"><b>League of Legends</b></h3>
 					</div>
 			</div><!-- ls-slide -->
 		</div><!-- slider -->
 	</div><!-- main-slider -->
 
-
+	<!-- 
 	<section class="section product-area">
 		<div class="container" id="produto">		
 					<div class="product-posts">
@@ -60,8 +60,8 @@
 									<p>FIFA, também conhecido como FIFA Football ou FIFA Soccer, é uma série de videojogos de futebol, 
 										lançados anualmente pela Electronic Arts sobre a chancela EA Sports. </p>
 									<a class="btn buy-btn" href="#"><b>Comprar</b></a>
-								</div><!-- single-post -->
-							</div><!-- col-sm-6 -->
+								</div>
+							</div>
 
 							<div class="col">
 								<div class="single-post">
@@ -71,8 +71,8 @@
 										sua fazenda dos sonhos prosperar! Cultive o dia inteiro na sua fazenda, participe de festivais 
 										e amplie o seu vilarejo. </p>
 									<a class="btn buy-btn" href="#"><b>Comprar</b></a>
-								</div><!-- single-post -->
-							</div><!-- col-sm-6 -->
+								</div>
+							</div>
 
 							<div class="col">
 								<div class="single-post">
@@ -81,13 +81,14 @@
 									<p>Os jogadores escolhem livremente o seu ponto de partida com 
 											o paraquedas, tentando permanecer na zona de segurança pelo maior tempo possível. </p>
 									<a class="btn buy-btn" href="#"><b>Comprar</b></a>
-								</div><!-- single-post -->
-							</div><!-- col-sm-6 -->	
-					</div><!-- product-posts -->
-		</div><!-- container -->
-	</section><!-- section -->
-		<footer>
-				<footer class="footer-distributed" id="contato">
+								</div>
+							</div>
+					</div>
+		</div>
+	</section>
+	-->
+		<footer style='margin-top: 0'>
+				<footer style='margin-top: 0' class="footer-distributed" id="contato">
 	 
 						<div class="footer-left">
 							<h3>Sobre<span>Game Store</span></h3>

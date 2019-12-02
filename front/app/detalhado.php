@@ -56,7 +56,7 @@
                                     <div>$titulo</div>
                                     <div>R$$valor</div>
                                     <input class='hide' type='number' name='anunid' value='$idanun'>
-                                    <button type='submit' class='btn'><img></img></button>
+                                    <button type='submit' class='btn'><img height='20px' src='../img/shopping-cart.svg'></button>
                                 </div>
                             </form>
                             ";

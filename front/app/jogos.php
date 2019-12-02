@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -11,13 +11,13 @@
 </head>
 
 <body>
-    <?php
+<?php   
         session_start();
         $logado = isset($_SESSION['logado']) ? $_SESSION['logado'] : FALSE;
         if (!$logado) {
             header("Location: ../forms/login.php?message=no_user_loggedin");
         }
-    ?>
+?>
     <!-- dynamic navbar -->
     <nav id="nav-app"></nav>
     <div class="main">

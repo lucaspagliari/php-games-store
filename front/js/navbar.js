@@ -9,7 +9,6 @@ if (url.includes("app")) {
             <li><a href="./jogos.php">Jogos</a></li>
             <li><a href="../forms/anuncio.php">Anunciar</a></li>
             <li><a href="./profile.php">Profile</a></li>
-            <li><a href="../forms/login.php">Login</a></li>
             <li><a href="../../api/logout.php">Logout</a></li>
             `;
 } else if (url.includes("forms") && !url.includes("login.php")) {
@@ -18,7 +17,6 @@ if (url.includes("app")) {
             <li><a href="../app/jogos.php">Jogos</a></li>
             <li><a href="./anuncio.php">Anunciar</a></li>
             <li><a href="../app/profile.php">Profile</a></li>
-            <li><a href="./login.php">Login</a></li>
             <li><a href="../../api/logout.php">Logout</a></li>
             `;
 } else if (url.includes("login.php")) {
